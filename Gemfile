@@ -1,67 +1,98 @@
-source "https://rubygems.org"
+# frozen_string_literal: true
+
+source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
-ruby "3.2.1"
+ruby '3.2.1'
 
-# Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
-gem "rails", "~> 7.0.5"
-
-# The original asset pipeline for Rails [https://github.com/rails/sprockets-rails]
-gem "sprockets-rails"
-
-# Use the Puma web server [https://github.com/puma/puma]
-gem "puma", "~> 5.0"
-
-# Use JavaScript with ESM import maps [https://github.com/rails/importmap-rails]
-gem "importmap-rails"
-
-# Hotwire's SPA-like page accelerator [https://turbo.hotwired.dev]
-gem "turbo-rails"
-
-# Hotwire's modest JavaScript framework [https://stimulus.hotwired.dev]
-gem "stimulus-rails"
-
-# Build JSON APIs with ease [https://github.com/rails/jbuilder]
-gem "jbuilder"
-
-# Use Redis adapter to run Action Cable in production
-gem "redis", "~> 4.0"
-
-gem 'pg'
-
-# Windows does not include zoneinfo files, so bundle the tzinfo-data gem
-gem "tzinfo-data", platforms: %i[ mingw mswin x64_mingw jruby ]
-
-# Reduces boot times through caching; required in config/boot.rb
-gem "bootsnap", require: false
-
-# Use Sass to process CSS
-# gem "sassc-rails"
-
-# Use Active Storage variants [https://guides.rubyonrails.org/active_storage_overview.html#transforming-images]
-# gem "image_processing", "~> 1.2"
+gem 'bootsnap', require: false
+gem 'importmap-rails'
+gem 'pg', '~> 1.1'
+gem 'puma', '~> 5.0'
+gem 'rails', '~> 7.0.4', '>= 7.0.4.3'
+gem 'redis', '~> 4.0'
+gem 'sprockets-rails'
+gem 'stimulus-rails'
+gem 'turbo-rails'
 
 group :development, :test do
-  # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
-  gem "debug", platforms: %i[ mri mingw x64_mingw ]
+  gem 'factory_bot_rails'
+  gem 'ffaker'
+  gem 'pry-rails'
 end
 
 group :development do
-  # Use console on exceptions pages [https://github.com/rails/web-console]
-  gem "web-console"
-
-  # Add speed badges [https://github.com/MiniProfiler/rack-mini-profiler]
-  # gem "rack-mini-profiler"
-
-  # Speed up commands on slow machines / big apps [https://github.com/rails/spring]
-  # gem "spring"
+  gem 'better_errors'
+  gem 'annotate'
+  gem 'binding_of_caller'
+  gem 'bullet'
 end
 
 group :test do
-  # Use system testing [https://guides.rubyonrails.org/testing.html#system-testing]
-  gem "capybara"
-  gem "selenium-webdriver"
-  gem "webdrivers"
+  gem 'capybara'
+  gem 'database_cleaner-active_record'
+  gem 'rspec-rails'
+  gem 'rspec-sidekiq'
+  gem 'selenium-webdriver'
+  gem 'webdrivers'
+  gem 'webmock'
+  gem 'shoulda-matchers', '~> 5.0'
+  gem 'magic_test'
 end
 
-gem "dartsass-rails", "~> 0.4.1"
+gem 'chartkick', '~> 5.0'
+gem 'dartsass-rails', '~> 0.4.1'
+gem 'devise', '~> 4.9'
+gem 'draper', '~> 4.0'
+gem 'flipper', '~> 0.28.0'
+gem 'flipper-redis', '~> 0.28.0'
+gem 'flipper-ui', '~> 0.28.0'
+gem 'friendly_id', '~> 5.5'
+gem 'groupdate', '~> 6.2'
+gem 'httparty', '~> 0.21.0'
+gem 'omniauth-oauth2'
+gem 'omniauth-rails_csrf_protection'
+gem 'rectify', '~> 0.13.0'
+gem 'sidekiq', '~> 7.0'
+gem 'sidekiq-scheduler'
+gem 'simple_form', '~> 5.2'
+gem 'store_model'
+gem 'view_component'
+
+gem 'ransack'
+gem 'square.rb', '~> 27.0'
+gem 'trestle'
+gem 'trestle-auth'
+gem 'trestle-search'
+gem 'simple_form_ransack'
+gem 'pagy'
+gem 'memoist'
+gem 'acts_as_list'
+gem 'enum_help'
+gem 'paper_trail'
+
+gem 'activerecord-cte'
+
+gem "money-rails", "~> 1.15"
+gem 'action_policy'
+
+gem "singed", "~> 0.2.1"
+
+gem "local_time", "~> 2.1"
+gem 'active_form', github: "joshmn/active_form"
+gem 'stripe'
+
+gem "paranoia"
+gem 'activemerchant'
+gem 'blueprinter'
+gem 'image_processing'
+
+gem "ahoy_matey", "~> 4.2"
+gem 'premailer-rails'
+
+gem "turbo_power", "~> 0.3.1"
+gem 'active_storage_validations'
+gem 'geocoder'
+gem "aws-sdk-s3", "~> 1.121"
+gem 'meta-tags'
+gem 'ice_cube'
